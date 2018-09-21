@@ -1,0 +1,235 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    /* max-width: 960px;
+    max-height: 600px;
+    width: 100%;
+    height: 100%; --> se comento para cambiar las medidas de fijas a relativas*/ 
+    width: 85vw;
+    height: 90vh;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative; /* $$ */
+    padding: 0.5em;
+    border-radius: 10px;
+    overflow: scroll; /* para insertar scroll */
+}
+
+.container{
+    background: #aa4b6b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table{
+    width: 100%;
+    border-spacing: 0;
+    
+}
+.table td, 
+.table th {
+    padding: 1em;
+    text-align: left;
+}
+
+.table tr:nth-child(even) { /* even: par - odd: impar */
+    background-color: #d1bfef; 
+}
+
+th{
+    display: none; /* Elimina la cabecera de la tabla*/
+}
+td{
+    display: block;
+}
+
+td:nth-of-type(1){ /*para afectar el primer elemento de los td*/
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+}
+/* .inline{  --> comentado por responsive nueva clase .item-image
+    display: inline-block;
+} */
+.item-image{
+    display: none;
+}
+.fa-star{
+    color: yellow
+}
+iframe{
+    width: 80vw;
+}
+.center{
+    text-align: center
+}
+.underline{
+    border-bottom: solid 5px #d1bfef;
+    padding-bottom: 20px;
+}
+.position{
+    background-color: #d1bfef;
+    padding: 10px;
+    border-radius: 10px; /* Sirve para redondear los bordes */
+    margin-left: 5px;
+}
+.actions{
+    position: sticky; 
+    top: 1em; /* em = unidad de medida relativa */
+    left: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    background-color: #4C2A38 ;
+    display: inline-block;
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)  0 3px 6px rgba(0, 0, 0, 0.23);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* a{
+    text-decoration: none;
+} */
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.title-item{
+    font-size: 0.8em;
+    text-transform: uppercase
+}
+.item-image{
+    display: none;
+}
+
+@media(min-width:600px){ 
+    th{
+        display: table-cell;
+    }
+    td{
+        display: table-cell;
+    }
+    td:nth-of-type(1){
+        font-size: 1em;
+        color: black
+    }
+    .content{
+        width: 70vw;
+        height: 70vh;
+        padding: 1.8em;
+    }
+    .item-image{
+        display: inline-block;
+    }
+    .inline{
+        display: inline-block
+    }
+    iframe{
+        width: 320px;
+        height: 220px;    
+    }
+    .actions{
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+    .title-item{
+        font-size: 1.5em;
+        text-transform: uppercase
+    }
+
+}
+/* 
+@media(min-width:600px){  sirve para poder configurar la presentación en diferentes resoluciones
+    th{
+        display: table-cell;
+    }
+    td{
+        display: table-cell;
+    }
+    td:nth-of-type(1){
+        font-size: 1em;
+        font-weight: 400;
+        color: #d1bfef
+    }
+    .content{
+        width: 70vw;
+        height: 70vh;
+        padding: 1.8em;
+    }
+    .item-image{
+        display: inline-block;
+        width: 50vw;
+    }
+    iframe{
+        width: 25vw;
+        height: 22vh;    
+    }
+}
+@media(min-width:900px){
+
+}
+*/
+
+/* pseudoclases
+:hover - para sombrear al pasar el cursor | :visited - para los links como "visitado"| :active | :focus - para mostrar el foco en el cual esta la pagina
+
+Ejemplos: 
+
+i:hover{
+    color: red
+}
+a:visited{
+    color: darkmagenta
+}
+a:focus{
+    background-color: red;
+}
+*/
+
+/* Unidades de medida Fijas en CSS
+Unidades fijas, estaticas o absolutas - Se ve igual ante cualquier resolución de la pantalla
+Pixeles px, centimetros cm, milimetros mm, picas pc, puntos pt
+
+Unidades de medida Relativas en CSS - Toman en referencia el tamaño del contenedor
+Porcentaje %, em, ex X, rem, vh (1%)- alto de la pantalla, vw(%)- ancho de la pantalla
+
+*/
+
+/*
+button {
+    background-color: blueviolet
+}
+
+Paleta de Colores
+#4C2A38 Oscuro
+#1C1425
+#2D586C Base
+#F8BEB3
+#885841 Claros
+*/
+
+/* Comentario */
+
+/* Centrado automatico
+poniendo:
+    margin-left: auto; margin-right:auto;
+*/
+
+
+/* medias querys
+
+Sintaxis: @media (definición del breakpoint) { estilos
+}
+*/

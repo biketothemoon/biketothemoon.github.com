@@ -1,0 +1,167 @@
+html {
+    font-family: 'Poppins', sans-serif;
+}
+.content {
+    width: 85vw;
+    height: 90vh;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative; 
+    padding: 0.5em;
+    border-radius: 1em;
+    overflow: scroll; 
+}
+.container{
+    background: #3CA55C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table{
+    width: 100%;
+    border-spacing: 0;    
+}
+.table th{
+    background-color: #469610;
+    color: white;
+}
+.table td, 
+.table th {
+    padding: 0.6em;
+    text-align: left;
+}
+.table tr:nth-child(even) { 
+    background-color: #dbffc4; 
+}
+th{
+    display: none; /* Elimina la cabecera de la tabla*/
+}
+td{
+    display: block;
+} 
+td:nth-of-type(1){ /*para afectar el primer elemento de los td */
+    font-size: 1em;
+    font-weight: bold; /*NEGRITA */
+    color: #469610;
+} 
+.fa-star{
+    color: green;
+}
+.active{
+    color:green;
+}
+.center{
+    display: block;
+}
+.position{
+    background-color: #c3ff9b;
+    padding: 0.4em;
+    border-radius: 0.3em; 
+}
+.actions{
+    position: sticky; 
+    top: 1em; 
+    left: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    background-color: #4C2A38 ;
+    display: inline-block;
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)  0 3px 6px rgba(0, 0, 0, 0.23);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.title-item{
+    font-size: 0.6em;
+    text-transform: uppercase;
+    margin-left: 1.2em;
+}
+.text{
+    text-align: justify;
+    padding: 1em;
+    font-size:0.85em;
+}
+img{
+    margin-left: 1em;
+    width: 75vw;
+    height: 35vh;
+}
+.link{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+}
+.fa-tripadvisor{
+    color: green;
+    font-size: 3em;
+    margin-right: 0.3em;
+}
+#nomargin{
+    margin-left:0;
+}
+
+@media(min-width:600px){ 
+    .content {
+        width: 70vw;
+        height: 70vh;
+        padding: 1.8em;
+    }
+    .table td, 
+    .table th {
+        padding: 1em;
+    }
+    th{
+        display: table-cell;
+    }
+    td{
+        display: table-cell;
+    } 
+    td:nth-of-type(1){
+        color: black
+    } 
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .position{
+        padding: 0.3em;
+        margin-left: 0.3em;
+    }
+    .actions{
+        position: absolute;
+        right: 1em;
+    }
+    .title-item{
+        font-size: 1.2em;
+        margin-left: 0;
+    }
+    .text{
+        font-size: 1em;
+    }
+    img{
+        width: 30vw;
+        height: 40vh;
+    }
+    .inline{
+        display: inline-block
+    }
+    .link{
+        font-size: 1em;
+    }
+}
